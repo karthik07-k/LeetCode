@@ -2,7 +2,7 @@ package com.leetcode.array;
 
 import java.util.Arrays;
 
-public class LongestCommonPrefix {
+public class LeetCode14_LongestCommonPrefix {
 
     // Finding the longest common prefix among an array of strings
     // Input: strs = ["flower","flow","flight"]
@@ -11,7 +11,7 @@ public class LongestCommonPrefix {
     // Time Complexity: O(n * m) where n is the number of strings and m is the length of the shortest string
     // Space Complexity: O(1)
     public static void main(String[] args) {
-        LongestCommonPrefix longestCommonPrefix = new LongestCommonPrefix();
+        LeetCode14_LongestCommonPrefix longestCommonPrefix = new LeetCode14_LongestCommonPrefix();
         String[] strs = {"flower", "flow", "flight"};
         String result = longestCommonPrefix.longestCommonPrefix(strs);
         System.out.println("Longest common prefix: " + result);
