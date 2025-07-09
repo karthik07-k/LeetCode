@@ -16,9 +16,9 @@ public class StockBuySell {
         int profit1 = findMaxProfitofBuyAndSellStocks(arr);
 
         System.out.println("Maximum profit using accumaltive approach : "+ profit1);
+        
 
-        Time Complexity:
-
+// Time Complexity:
 // O(n), where n is the length of the prices array.
 // The function iterates through the array once.
 // Space Complexity:
