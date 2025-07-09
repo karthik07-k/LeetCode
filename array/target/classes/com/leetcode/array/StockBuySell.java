@@ -1,5 +1,7 @@
 package com.leetcode.array;
 
+import java.sql.Time;
+
 public class StockBuySell {
 
     public static void main(String[] args) {
@@ -14,6 +16,20 @@ public class StockBuySell {
         int profit1 = findMaxProfitofBuyAndSellStocks(arr);
 
         System.out.println("Maximum profit using accumaltive approach : "+ profit1);
+
+        Time Complexity:
+
+// O(n), where n is the length of the prices array.
+// The function iterates through the array once.
+// Space Complexity:
+
+// O(1).
+// Only a constant amount of extra space (res and loop variable) is used, regardless of input size.
+// Summary:
+
+// Time: O(n)
+// Space: O(1)
+
     }
 
     private static int findMaxProfitofBuyAndSellStocks(int[] prices) {
@@ -36,7 +52,7 @@ public class StockBuySell {
         int localMinima = prices[0];
         int localMaxima = prices[0];
 
-        int res = 0;
+        int profit = 0;
 
         int i = 0;
         while(i < n-1){
@@ -52,11 +68,12 @@ public class StockBuySell {
             localMaxima = prices[i];
 
             //add current profit
-            res += (localMaxima - localMinima);
+            profit += (localMaxima - localMinima);
 
         }
 
-        return res;
+        return profit;
     }
+
 
 }
