@@ -9,8 +9,23 @@ public class Fibonacci {
         System.out.println("The BruteForce solution : "+ fib(n));
         System.out.println("The DP Top Down Approach - Memoization : "+fibMemo(n));
         System.out.println("The DP Bottom up Approach - Tabulation : "+fibTab(n));
+        System.out.println("The Optimal space approach : "+fibOpt(n));
     }
+    private static int fibOpt(int n){
 
+        int prevPrev = 0;
+        int prev = 1;
+        int curr = 1;
+
+        for(int i = 2; i<=n; i++){
+            curr = prev + prevPrev;
+            prevPrev = prev;
+            prev = curr;
+        }
+
+        return curr;
+
+    }
     private static int fibTab(int n) {
         //declaring the dp table to store the computed values in iterative approach - bottom up
         int[] dp = new int[n+1];
